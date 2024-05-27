@@ -22,7 +22,7 @@
     height: 86%;
 }
 #container div{
-    width: 80%;
+    
     margin: auto;
 }
 #central-container{
@@ -210,7 +210,7 @@
 
 .social {
     position: fixed;
-    top: 35%;
+    top: 41%;
     left: 1%;
     z-index: 10;
 }
