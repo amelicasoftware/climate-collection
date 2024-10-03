@@ -2,6 +2,8 @@ import { Component, OnInit, Input } from "@angular/core";
 import { MenuItemModel } from "@syncfusion/ej2-angular-navigations";
 import { TranslationService } from "../../services/translation.service";
 import { Router } from "@angular/router";
+import * as $ from 'jquery';
+import { HostListener } from '@angular/core';
 
 @Component({
   selector: "app-header",
@@ -11,6 +13,7 @@ import { Router } from "@angular/router";
 export class HeaderComponent implements OnInit {
   menuOpen: boolean = false;
   selection: number;
+  isHidden: boolean = false;
 
   @Input() currentSection: string;
 
@@ -176,5 +179,17 @@ export class HeaderComponent implements OnInit {
 
   changeLanguage(lang: string): void {
     this.translationService.changeLanguage(lang);
+  }
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    const triggerPoint = 500; 
+
+    if (scrollTop >= triggerPoint) {
+      this.isHidden = true;
+    } else {
+      this.isHidden = false;
+    }
   }
 }

@@ -6,6 +6,10 @@
   z-index: 1000;
 }
 
+#hide-on-scroll.hidden {
+  display: none;
+}
+
 .top-bar {
   display: flex;
   width: 100%;

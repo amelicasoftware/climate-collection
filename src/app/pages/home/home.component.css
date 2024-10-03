@@ -315,11 +315,9 @@
 
 }
 .width-text-number{
-    width: 150px!important;
+    width: 400px!important;
     margin: 0px 3px!important;
-    font-family: 'Barlow-Regular';   
-    text-align: left;
-
+    font-family: 'Barlow-Regular'; 
 }
 
 .text-description{
@@ -586,10 +584,26 @@
     }
     #central-container {
         width: 90% !important;
+        flex-direction: column;
+        margin: 30px auto !important;
     }
     #container {
         background-position: 49%;
     }
+
+    #container-searcher{
+        margin: 20px auto !important;
+        width: 70%;
+    }
+
+    .numbers{
+        font-size: 16px;
+    }
+
+    .width-text-number{
+        font-size: 16px;
+    }
+
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
