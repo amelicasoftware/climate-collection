@@ -307,12 +307,11 @@
     justify-content: center;
     align-items: flex-end;
     font-size: 12pt;
-    width: 50% !important;
+    width: 60% !important;
 }
 .numbers{
     font-family: 'Barlow-Bold';
     font-size: 20pt;
-
 }
 .width-text-number{
     width: 400px!important;

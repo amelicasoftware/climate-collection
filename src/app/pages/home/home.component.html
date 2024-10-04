@@ -49,14 +49,20 @@
                 <!-- <div class="text-description" [innerHTML]="'navegacion.total' | translate: { articles: (numArticulos), journals: (numRevistas), countries: (numPaises)}">
                 </div> -->
                 <div id="new-number">
-                    <p class="width-text-number">
-                        {{ numArticulos }}
+                    <p class="parrafo-number">
+                        <span class="numbers">
+                            {{ numArticulos }}
+                        </span>
                         {{ 'navegacion.texto-num-articulo' | translate }}
                         {{ 'navegacion.texto-num-articulo2' | translate }}
-                        {{ numRevistas }}
+                        <span class="numbers">
+                            {{ numRevistas }}
+                        </span>
                         {{ 'navegacion.texto-num-rev' | translate }}
                         {{ 'navegacion.texto-num-rev2' | translate }}
-                        {{ numPaises }}
+                        <span class="numbers">
+                            {{ numPaises }}
+                        </span>
                         {{ 'navegacion.texto-num-paises' | translate }}
                     </p>
                 </div>
