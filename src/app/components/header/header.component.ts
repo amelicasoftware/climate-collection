@@ -14,6 +14,7 @@ export class HeaderComponent implements OnInit {
   menuOpen: boolean = false;
   selection: number;
   isHidden: boolean = false;
+  isShow: boolean = false;
 
   @Input() currentSection: string;
 
@@ -184,7 +185,9 @@ export class HeaderComponent implements OnInit {
   @HostListener('window:scroll', [])
   onWindowScroll() {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    const scrollPosition = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0;
     const triggerPoint = 500; 
+    this.isShow  = scrollPosition > 300;
 
     if (scrollTop >= triggerPoint) {
       this.isHidden = true;

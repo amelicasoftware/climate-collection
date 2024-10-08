@@ -15,6 +15,11 @@
       </div>
   
       <div class="navigation">
+        <div class="img-scroll" *ngIf="isShow">
+          <a href="https://www.redalyc.org/" target="_blank">
+            <img src="assets/img/shared/redalyc-logo.png" alt="Redalyc Logo" height="40px"/>
+          </a>
+        </div>
         <div class="links-home" [class.visible]="menuOpen">
           <ejs-menu [items]="menuItems">
             <ng-template #template let-menuItems="">
@@ -68,8 +73,8 @@
   
     <div *ngIf="menuOpen" id="menu-desplegable" [ngClass]="{'menu-open': menuOpen, 'menu-close': !menuOpen}">
       <div class="btn-close" (click)="closeMenu()">
-        <a>Cerrar</a>
-      </div>
+        <i class="fa fa-times fa-3x" aria-hidden="true"></i>
+      </div> 
       <div (click)="toSearcher()" class="btn-menu" (click)="closeMenu()">
         <img src="assets/img/home/busqueda.png">
         <a
